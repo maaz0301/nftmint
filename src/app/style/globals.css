@@ -1,0 +1,292 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import "./input.css";
+
+@import "tailwindcss";
+
+/* theme config */
+@theme {
+  --container-width: 1320px;
+  /* Breakpoints */
+  --breakpoint-xs: 430px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1320px;
+
+  /* Colors */
+  --color-primary: #b1cc09;
+  /* rounded basic  */
+  --radius-primary: 22px;
+
+  --bg-color:#0B1725
+  /* shadow  */
+  --shadow-primary: 0px -11.295px 25.1px 0px rgba(1, 102, 152, 0.1),
+    0px 46.434px 46.434px 0px rgba(1, 102, 152, 0.09),
+    0px 11.295px 25.1px 0px rgba(1, 102, 152, 0.1);
+
+  --animate-spin: spin 2s linear infinite;
+}
+
+@layer base {
+  body {
+    font-family: "Poppins", sans-serif;
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@layer utilities {
+  .container {
+    padding: 0 16px;
+    margin: 0 auto;
+  }
+  input::-webkit-autofill {
+    background-color: transparent !important;
+    background: transparent !important;
+  }
+}
+@layer components {
+  .typography {
+    p {
+      font-size: var(--text-base);
+      color: var(--color-gray-700);
+    }
+    h1 {
+      font-size: var(--text-2xl--line-height);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-gray-950);
+    }
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-gray-950);
+    }
+  }
+}
+
+body{
+  background: rgb(0,36,15);
+background: linear-gradient(90deg, rgba(0,36,15,1) 0%, rgba(8,19,29,1) 35%, rgba(5,10,17,1) 100%); 
+}
+.bg-grad{
+  
+
+  background: #07151B;
+  background: linear-gradient(90deg,rgba(7, 21, 27, 1) 0%, rgba(9, 26, 36, 1) 50%, rgba(15, 30, 48, 1) 100%);
+}
+/* custom styles */
+
+/* globals.css or Tailwind config */
+.custom-ant-table .ant-table {
+  background-color: transparent !important;
+  font-family: inter;
+  font-size: 14px;
+}
+
+.custom-ant-table .ant-table-thead > tr > th {
+  background-color: #2693F542 !important;
+  color: white;
+  font-family: inter;
+  font-weight: 600;
+  border: none;
+  font-size: 12px;
+}
+
+.custom-ant-table .ant-table-tbody > tr > td {
+  background-color: transparent !important;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inter;
+ 
+}
+
+.custom-ant-table .ant-pagination {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.ant-table-wrapper .ant-table-tbody >tr >td {
+  transition: background 0.2s, border-color 0.2s;
+  border-bottom: 1px solid #19E3D429;
+ 
+}
+
+.ant-table-wrapper .ant-table-thead >tr>td{
+  font-size: 12px;
+}
+
+.ant-table-wrapper .ant-table-thead >tr>th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before{
+  width: 0px;
+  height: 0px;
+}
+
+.ant-modal .ant-modal-content{
+  background-color: rgba(2, 92, 185, 0.1); /* or #025CB91A */
+  backdrop-filter: blur(446px);
+  -webkit-backdrop-filter: blur(446px);    
+}
+
+/* .ant-pagination-disabled .ant-pagination-item-link{
+  color: white;
+} */
+.ant-pagination .ant-pagination-prev{
+  color: white!important;
+}
+.ant-pagination .ant-pagination-prev.ant-pagination-disabled .ant-pagination-item-link{
+  color: black;
+  border: white;
+  background-color: white;
+}
+.ant-pagination .ant-pagination-prev:hover.ant-pagination-disabled .ant-pagination-item-link{
+  color: black;
+  border: white;
+  background-color: white;
+}
+.ant-pagination .ant-pagination-next .ant-pagination-item-link {
+  color: black;
+  border: white;
+  background-color: white;
+}
+.ant-pagination .ant-pagination-next:hover .ant-pagination-item-link {
+  color: black;
+  border: white;
+  background-color: white;
+}
+
+.ant-pagination .ant-pagination-item {
+  background-color: transparent !important;
+  color: white !important;
+  border: none !important;
+}
+
+/* Change the background color and text color when an item is active */
+.ant-pagination .ant-pagination-item:active {
+  background-color: #4184D6 !important;
+  color: white !important;
+  border: none !important;
+}
+.ant-pagination .ant-pagination-item:hover {
+  background-color: #4184D6 !important;
+  color: white !important;
+  border: none !important;
+}
+
+/* Optionally style the selected page with a custom background color */
+.ant-pagination .ant-pagination-item-active {
+  background-color: #4184D6 !important;
+  color: white !important;
+  border: none !important;
+}
+.ant-pagination .ant-pagination-item a {
+  color: white;
+}
+
+/* styles/globals.css */
+
+/* Glowing effect background */
+@keyframes glowing {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+}
+
+/* styles/globals.css */
+/* Tailwind + custom styles */
+
+
+
+/* Custom modal class to target modal header and make it transparent */
+.custom-modal .ant-modal-header {
+  background-color: transparent !important; /* Make the header background transparent */
+  border-bottom: none !important; /* Remove the border under the header */
+  padding: 0 !important; /* Optional: Adjust padding */
+}
+
+.custom-modal .ant-modal-title {
+  color: #fff; /* Set the title color */
+  font-weight: bold;
+}
+
+.custom-modal .ant-modal-body {
+  background-color: transparent !important; /* Make the modal body transparent */
+  color: #fff; /* Text color */
+}
+
+.custom-modal .ant-modal-footer {
+  background-color: transparent !important; /* Optional: Make the footer transparent */
+  border-top: none !important; /* Remove the footer border */
+}
+
+/* styles.css or styles.module.scss */
+.change-password-modal .ant-modal-content {
+  background-color: rgba(0, 0, 0, 0.2); 
+  backdrop-filter: blur(80px);        
+  border: 1px solid rgba(25, 227, 212, 0.16); 
+  border-radius: 22px;                 
+}
+
+.change-password-modal .ant-modal-header {
+  background-color: transparent !important;
+  border-bottom: none; /* optional: remove bottom border */
+}
+
+.change-password-modal .ant-modal-title {
+  color: #000; /* Optional: set title color */
+}
+
+.ant-table-container table>thead>tr:first-child >*:first-child{
+  border-start-start-radius: 0px;
+}
+
+
+/* style.css or globals.css */
+.custom-ant-table thead > tr > th:first-child {
+  border-top-left-radius: 0 !important;
+}
+
+.custom-ant-table thead > tr > th:last-child {
+  border-top-right-radius: 0 !important;
+}
+
+.custom-ant-table thead > tr > th {
+  border-radius: 0 !important;
+}
+
+.create-fundraiser-modal .ant-modal-header {
+  background-color: transparent !important;
+  border-bottom: none; /* Optional: remove bottom border */
+  padding-bottom: 0;
+  font: size 100px !important;
+  padding: 20px !important;    /* Optional: reduce space */
+}
+
+.create-fundraiser-modal .ant-modal-title {
+  color: white; /* To maintain your white text */
+}
+
+
+.custom-box-modal {
+  border: 1px solid rgba(25, 227, 212, 0.16); /* #19E3D429 = rgba(25, 227, 212, 0.16) */
+  background-color: rgba(2, 92, 185, 0.10);    /* #025CB91A = rgba(2, 92, 185, 0.10) */
+  border-radius: 22px;
+}
+.modal-bg{
+  background-color: #041831;
+}
