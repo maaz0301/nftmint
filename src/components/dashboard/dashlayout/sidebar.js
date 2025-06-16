@@ -143,6 +143,7 @@ import RafflesIcon from "../../../../public/assets/icons/fund.svg";
 import EarningsIcon from "../../../../public/assets/icons/earningOverview.svg";
 import BatchIcon from "../../../../public/assets/icons/batch-control.svg";
 
+
 const menuItems = [
   {
     name: "Dashboard",
@@ -198,6 +199,7 @@ const Sidebar = () => {
         aria-label="Toggle Menu"
         onClick={() => setIsOpen(!isOpen)}
         className="md:hidden fixed top-4 left-4 z-60 p-2 rounded-full shadow-md"
+        className="md:hidden fixed top-4 left-4 z-60 p-2 rounded-full shadow-md"
       >
         <Icon
           icon={isOpen ? "mdi:close" : "mdi:menu"}
@@ -208,6 +210,7 @@ const Sidebar = () => {
       {/* Sidebar */}
       <aside
         className={`fixed top-0 left-0 h-full w-[75%] sm:w-68 bg-gradient-to-b from-card-bg to-purple-900/50 border-r border-border-primary/30 rounded-r-[22px] shadow-xl flex flex-col p-6 transition-transform duration-300 ease-in-out z-40 cursor-pointer backdrop-blur-xl
+        className={`fixed top-0 left-0 h-full w-[75%] sm:w-68 bg-gradient-to-b from-card-bg to-purple-900/50 border-r border-border-primary/30 rounded-r-[22px] shadow-xl flex flex-col p-6 transition-transform duration-300 ease-in-out z-40 cursor-pointer backdrop-blur-xl
         ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0`}
       >
         {/* Logo */}
@@ -217,8 +220,10 @@ const Sidebar = () => {
         </h1>
         </div>
 
+
         {/* Navigation Menu */}
         <nav className="flex-1 space-y-3">
+          <h3 className="text-sm font-semibold text-text-primary">Menu</h3>
           <h3 className="text-sm font-semibold text-text-primary">Menu</h3>
           {menuItems.map((item) => {
             const isActive = pathname === item.path;
@@ -230,6 +235,8 @@ const Sidebar = () => {
                 ${isActive ? "text-primary bg-primary/20 shadow-glow" : "text-white hover:text-primary"}`}
               >
                 <span
+                  className={`flex items-center justify-center w-10 h-10 rounded-full mr-3 transition-all duration-200
+                  ${isActive ? "bg-primary shadow-glow" : "group-hover:bg-primary/20"}`}
                   className={`flex items-center justify-center w-10 h-10 rounded-full mr-3 transition-all duration-200
                   ${isActive ? "bg-primary shadow-glow" : "group-hover:bg-primary/20"}`}
                 >
