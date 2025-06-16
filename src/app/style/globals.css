@@ -17,15 +17,15 @@
   --breakpoint-2xl: 1320px;
 
   /* Colors */
-  --color-primary: #b1cc09;
+  --color-primary: #7C3AED;
   /* rounded basic  */
   --radius-primary: 22px;
 
-  --bg-color:#0B1725
+  --bg-color: #0F0F23;
   /* shadow  */
-  --shadow-primary: 0px -11.295px 25.1px 0px rgba(1, 102, 152, 0.1),
-    0px 46.434px 46.434px 0px rgba(1, 102, 152, 0.09),
-    0px 11.295px 25.1px 0px rgba(1, 102, 152, 0.1);
+  --shadow-primary: 0px -11.295px 25.1px 0px rgba(124, 58, 237, 0.1),
+    0px 46.434px 46.434px 0px rgba(124, 58, 237, 0.09),
+    0px 11.295px 25.1px 0px rgba(124, 58, 237, 0.1);
 
   --animate-spin: spin 2s linear infinite;
 }
@@ -38,6 +38,15 @@
 @keyframes spin {
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(124, 58, 237, 0.6);
   }
 }
 
@@ -71,15 +80,14 @@
 }
 
 body{
-  background: rgb(0,36,15);
-background: linear-gradient(90deg, rgba(0,36,15,1) 0%, rgba(8,19,29,1) 35%, rgba(5,10,17,1) 100%); 
+  background: linear-gradient(135deg, #0F0F23 0%, #1E1B4B 35%, #312E81 100%);
+  min-height: 100vh;
 }
-.bg-grad{
-  
 
-  background: #07151B;
-  background: linear-gradient(90deg,rgba(7, 21, 27, 1) 0%, rgba(9, 26, 36, 1) 50%, rgba(15, 30, 48, 1) 100%);
+.bg-grad{
+  background: linear-gradient(135deg, #1E1B4B 0%, #312E81 50%, #4C1D95 100%);
 }
+
 /* custom styles */
 
 /* globals.css or Tailwind config */
@@ -90,7 +98,7 @@ background: linear-gradient(90deg, rgba(0,36,15,1) 0%, rgba(8,19,29,1) 35%, rgba
 }
 
 .custom-ant-table .ant-table-thead > tr > th {
-  background-color: #2693F542 !important;
+  background-color: rgba(124, 58, 237, 0.25) !important;
   color: white;
   font-family: inter;
   font-weight: 600;
@@ -104,7 +112,6 @@ background: linear-gradient(90deg, rgba(0,36,15,1) 0%, rgba(8,19,29,1) 35%, rgba
   font-size: 14px;
   font-weight: 500;
   font-family: inter;
- 
 }
 
 .custom-ant-table .ant-pagination {
@@ -115,8 +122,7 @@ background: linear-gradient(90deg, rgba(0,36,15,1) 0%, rgba(8,19,29,1) 35%, rgba
 
 .ant-table-wrapper .ant-table-tbody >tr >td {
   transition: background 0.2s, border-color 0.2s;
-  border-bottom: 1px solid #19E3D429;
- 
+  border-bottom: 1px solid rgba(124, 58, 237, 0.16);
 }
 
 .ant-table-wrapper .ant-table-thead >tr>td{
@@ -129,14 +135,13 @@ background: linear-gradient(90deg, rgba(0,36,15,1) 0%, rgba(8,19,29,1) 35%, rgba
 }
 
 .ant-modal .ant-modal-content{
-  background-color: rgba(2, 92, 185, 0.1); /* or #025CB91A */
+  background-color: rgba(30, 27, 75, 0.8);
   backdrop-filter: blur(446px);
   -webkit-backdrop-filter: blur(446px);    
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  border-radius: 22px;
 }
 
-/* .ant-pagination-disabled .ant-pagination-item-link{
-  color: white;
-} */
 .ant-pagination .ant-pagination-prev{
   color: white!important;
 }
@@ -167,29 +172,25 @@ background: linear-gradient(90deg, rgba(0,36,15,1) 0%, rgba(8,19,29,1) 35%, rgba
   border: none !important;
 }
 
-/* Change the background color and text color when an item is active */
 .ant-pagination .ant-pagination-item:active {
-  background-color: #4184D6 !important;
+  background-color: #7C3AED !important;
   color: white !important;
   border: none !important;
 }
 .ant-pagination .ant-pagination-item:hover {
-  background-color: #4184D6 !important;
+  background-color: #7C3AED !important;
   color: white !important;
   border: none !important;
 }
 
-/* Optionally style the selected page with a custom background color */
 .ant-pagination .ant-pagination-item-active {
-  background-color: #4184D6 !important;
+  background-color: #7C3AED !important;
   color: white !important;
   border: none !important;
 }
 .ant-pagination .ant-pagination-item a {
   color: white;
 }
-
-/* styles/globals.css */
 
 /* Glowing effect background */
 @keyframes glowing {
@@ -207,56 +208,47 @@ background: linear-gradient(90deg, rgba(0,36,15,1) 0%, rgba(8,19,29,1) 35%, rgba
   }
 }
 
-/* styles/globals.css */
-/* Tailwind + custom styles */
-
-
-
-/* Custom modal class to target modal header and make it transparent */
 .custom-modal .ant-modal-header {
-  background-color: transparent !important; /* Make the header background transparent */
-  border-bottom: none !important; /* Remove the border under the header */
-  padding: 0 !important; /* Optional: Adjust padding */
+  background-color: transparent !important;
+  border-bottom: none !important;
+  padding: 0 !important;
 }
 
 .custom-modal .ant-modal-title {
-  color: #fff; /* Set the title color */
+  color: #fff;
   font-weight: bold;
 }
 
 .custom-modal .ant-modal-body {
-  background-color: transparent !important; /* Make the modal body transparent */
-  color: #fff; /* Text color */
+  background-color: transparent !important;
+  color: #fff;
 }
 
 .custom-modal .ant-modal-footer {
-  background-color: transparent !important; /* Optional: Make the footer transparent */
-  border-top: none !important; /* Remove the footer border */
+  background-color: transparent !important;
+  border-top: none !important;
 }
 
-/* styles.css or styles.module.scss */
 .change-password-modal .ant-modal-content {
-  background-color: rgba(0, 0, 0, 0.2); 
+  background-color: rgba(30, 27, 75, 0.8); 
   backdrop-filter: blur(80px);        
-  border: 1px solid rgba(25, 227, 212, 0.16); 
+  border: 1px solid rgba(124, 58, 237, 0.3); 
   border-radius: 22px;                 
 }
 
 .change-password-modal .ant-modal-header {
   background-color: transparent !important;
-  border-bottom: none; /* optional: remove bottom border */
+  border-bottom: none;
 }
 
 .change-password-modal .ant-modal-title {
-  color: #000; /* Optional: set title color */
+  color: #fff;
 }
 
 .ant-table-container table>thead>tr:first-child >*:first-child{
   border-start-start-radius: 0px;
 }
 
-
-/* style.css or globals.css */
 .custom-ant-table thead > tr > th:first-child {
   border-top-left-radius: 0 !important;
 }
@@ -271,22 +263,35 @@ background: linear-gradient(90deg, rgba(0,36,15,1) 0%, rgba(8,19,29,1) 35%, rgba
 
 .create-fundraiser-modal .ant-modal-header {
   background-color: transparent !important;
-  border-bottom: none; /* Optional: remove bottom border */
+  border-bottom: none;
   padding-bottom: 0;
-  font: size 100px !important;
-  padding: 20px !important;    /* Optional: reduce space */
+  font-size: 100px !important;
+  padding: 20px !important;
 }
 
 .create-fundraiser-modal .ant-modal-title {
-  color: white; /* To maintain your white text */
+  color: white;
 }
-
 
 .custom-box-modal {
-  border: 1px solid rgba(25, 227, 212, 0.16); /* #19E3D429 = rgba(25, 227, 212, 0.16) */
-  background-color: rgba(2, 92, 185, 0.10);    /* #025CB91A = rgba(2, 92, 185, 0.10) */
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  background-color: rgba(30, 27, 75, 0.8);
   border-radius: 22px;
 }
+
 .modal-bg{
-  background-color: #041831;
+  background-color: #1E1B4B;
+}
+
+/* Glow effects */
+.glow-purple {
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.5);
+}
+
+.glow-pink {
+  box-shadow: 0 0 20px rgba(236, 72, 153, 0.5);
+}
+
+.glow-green {
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
 }
