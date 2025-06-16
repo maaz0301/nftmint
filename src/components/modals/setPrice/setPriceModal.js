@@ -35,8 +35,7 @@ const SetPriceModal = ({ visible, onCancel, onSave, initialPrice = '' }) => {
 
   return (
     <Modal
-      title={<span className="text-white text-xl font-bold">Set Price</span>}
-      }
+      title={<span className="text-white text-xl font-bold">Set Price</span>} // Removed stray brace here
       open={visible}
       onCancel={onCancel}
       className="create-fundraiser-modal"
