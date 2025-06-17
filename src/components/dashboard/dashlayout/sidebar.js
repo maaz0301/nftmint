@@ -221,7 +221,6 @@ const Sidebar = () => {
         {/* Navigation Menu */}
         <nav className="flex-1 space-y-3">
           <h3 className="text-sm font-semibold text-text-primary">Menu</h3>
-          <h3 className="text-sm font-semibold text-text-primary">Menu</h3>
           {menuItems.map((item) => {
             const isActive = pathname === item.path;
             return (
